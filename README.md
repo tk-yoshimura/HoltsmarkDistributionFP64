@@ -1,7 +1,7 @@
 # HoltsmarkDistributionFP64
- HoltsmarkDistribution Double Precision Implement
+ Holtsmark Distribution Double Precision Implement
  
-## Landau Distribution
+## Holtsmark Distribution
 See: [HoltsmarkDistribution](https://github.com/tk-yoshimura/HoltsmarkDistribution)  
 Double-Double Precision: [DoubleDoubleStatistic](https://github.com/tk-yoshimura/DoubleDoubleStatistic)  
 
