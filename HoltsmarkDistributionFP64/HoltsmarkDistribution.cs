@@ -1,4 +1,8 @@
-﻿using HoltsmarkDistributionFP64.InternalUtils;
+﻿// Author and Approximation Formula Coefficient Generator: T.Yoshimura
+// Github: https://github.com/tk-yoshimura
+// Original Code: https://github.com/tk-yoshimura/HoltsmarkDistributionFP64
+
+using HoltsmarkDistributionFP64.InternalUtils;
 using HoltsmarkDistributionFP64.RandomGeneration;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
