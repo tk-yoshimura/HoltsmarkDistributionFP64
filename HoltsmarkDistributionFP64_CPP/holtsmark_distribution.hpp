@@ -30,6 +30,14 @@ double pade(double x, vector<double> numer, vector<double> denom) {
     return sc / sd;
 }
 
+double square(double x) {
+    return x * x;
+}
+
+double cube(double x) {
+    return x * x * x;
+}
+
 double holtsmark_pdf(double x) {
     static const vector<double> pade_plus_0_1_numer = {
         2.87352751452164445024e-1,
@@ -214,7 +222,7 @@ double holtsmark_pdf(double x) {
         y = pade(x - 32, pade_plus_32_64_numer, pade_plus_32_64_denom);
     }
     else {
-        double u = 1 / pow(sqrt(x), 3);
+        double u = 1 / cube(sqrt(x));
 
         y = pade(u, pade_plus_limit_numer, pade_plus_limit_denom) * u / x;
     }
@@ -422,7 +430,7 @@ double holtsmark_cdf(double x, bool complementary = false) {
         y = pade(x - 32, pade_plus_32_64_numer, pade_plus_32_64_denom);
     }
     else {
-        double u = 1 / pow(sqrt(x), 3);
+        double u = 1 / cube(sqrt(x));
 
         y = pade(u, pade_plus_limit_numer, pade_plus_limit_denom) * u;
     }
@@ -758,7 +766,7 @@ double holtsmark_quantile(double x, bool complementary = false) {
             v = 1 / ldexp(cbrt(pi), 1);
         }
 
-        y = v / pow(cbrt(x), 2);
+        y = v / square(cbrt(x));
     }
 
     y = complementary ? y : -y;
