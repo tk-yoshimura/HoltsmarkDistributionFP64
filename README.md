@@ -7,6 +7,7 @@ Double-Double Precision: [DoubleDoubleStatistic](https://github.com/tk-yoshimura
 
 ## Double Precision (IEEE 754) Approx
 [C# code](HoltsmarkDistributionFP64/HoltsmarkDistribution.cs)  
+[C++ code](HoltsmarkDistributionFP64_CPP/holtsmark_distribution.hpp)  
 
 ## Error
 
