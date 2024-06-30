@@ -443,128 +443,51 @@ double holtsmark_cdf(double x, bool complementary = false) {
 }
 
 double holtsmark_quantile(double x, bool complementary = false) {
-    static const vector<double> pade_plus_0p125_0p140625_numer = {
-        1.64755907881888895243e0,
-        -9.46223268108472131461e0,
-        -1.46485828319487451039e1,
-        7.25486790973800512399e1,
-        1.24891835115130504600e1,
-    };
-    static const vector<double> pade_plus_0p125_0p140625_denom = {
+    static const vector<double> pade_plus_limit_denom = {
         1.00000000000000000000e0,
-        -1.08445161397758561876e1,
-        2.64180561262881565213e1,
-        6.05469887177596690605e0,
-        -1.89634431425301124532e1,
+        -5.05959751628952574534e0,
+        8.04408113719341786819e0,
     };
-    static const vector<double> pade_plus_0p140625_0p15625_numer = {
-        1.52359744792606448551e0,
-        -8.06431964734279358901e0,
-        -1.34734713642884116677e1,
-        6.60891706311952626104e1,
-        -9.13941763584971462836e-1,
-    };
-    static const vector<double> pade_plus_0p140625_0p15625_denom = {
-        1.00000000000000000000e0,
-        -1.02170445962169570921e1,
-        2.48827421714146675366e1,
-        1.18985608603199195528e0,
-        -1.72878893066704167528e1,
-    };
-    static const vector<double> pade_plus_0p15625_0p1875_numer = {
-        1.31030403921397562363e0,
-        1.16504406379173711366e1,
-        -8.14308477961457578548e1,
-        -1.40759937615479063068e2,
-        6.26326063408466033160e2,
-    };
-    static const vector<double> pade_plus_0p15625_0p1875_denom = {
-        1.00000000000000000000e0,
-        4.12589389551612894734e0,
-        -9.40067348012281374404e1,
-        2.35795998097346762045e2,
-        2.31515054688888762501e1,
-        -1.63201289312224479049e2,
-    };
-    static const vector<double> pade_plus_0p1875_0p25_numer = {
-        9.68933181713583005209e-1,
-        7.49553732900960722458e0,
-        -3.42717276813871206860e1,
-        -1.16327624742001106254e2,
-        3.44015086242673128090e2,
-        6.78292351447349643702e1,
-        -1.97870428032134245496e2,
-    };
-    static const vector<double> pade_plus_0p1875_0p25_denom = {
-        1.00000000000000000000e0,
-        2.73171003061503859864e0,
-        -5.69774659769725058898e1,
-        1.15769902958643617266e2,
-        6.11073403960390191083e1,
-        -1.65072996333156424625e2,
-        -7.42925581406063537242e0,
-    };
-    static const vector<double> pade_plus_0p25_0p28125_numer = {
-        8.24180933056718074476e-1,
-        4.76452509127764244393e-1,
-        -1.35090981158803003137e1,
-        9.20753678163114872540e0,
-        1.00034227601935604425e1,
-    };
-    static const vector<double> pade_plus_0p25_0p28125_denom = {
-        1.00000000000000000000e0,
-        -4.80540734643520927196e0,
-        2.66403537720458778267e0,
-        7.44369383656293972199e0,
-        -2.41052288724237612587e0,
-    };
-    static const vector<double> pade_plus_0p28125_0p3125_numer = {
-        6.90498457639035315479e-1,
-        1.42973901835715680920e0,
-        -1.17118525918434220208e1,
-        3.30514012302929917478e0,
-        8.99659786405910843540e0,
-    };
-    static const vector<double> pade_plus_0p28125_0p3125_denom = {
-        1.00000000000000000000e0,
-        -3.91608147997264525031e0,
-        4.51563972106315597123e-1,
-        6.66076245874745266562e0,
-        -9.94148434923448964903e-1,
-    };
-    static const vector<double> pade_plus_0p3125_0p375_numer = {
-        4.45602574935161564368e-1,
-        2.40903879910268494867e0,
-        -9.82794302165885089168e0,
-        -2.79117626346573577254e0,
-        1.48986643596020950145e1,
-    };
-    static const vector<double> pade_plus_0p3125_0p375_denom = {
-        1.00000000000000000000e0,
-        -2.99188829301159725281e0,
-        -2.00433579647621385335e0,
-        7.98973404171181782792e0,
-        3.59444385562866023801e-1,
-        -2.34737380803510920247e0,
-    };
-    static const vector<double> pade_plus_0p375_0p5_numer = {
+    static const vector<double> pade_plus_expm1_2_numer = {
         0.00000000000000000000e0,
-        3.48004323935095437104e0,
-        9.42839552086342750948e-1,
-        -2.08787999555964682038e1,
-        -3.20444361481410826111e0,
-        3.15453348812026005283e1,
-        1.26228984012477252670e0,
-        -7.29712647060353688734e0,
+        7.59789769759814986929e-1,
+        1.27515008642985381862e0,
+        4.38619247097275579086e-1,
+        -1.25521537863031799276e-1,
+        -2.58555599127223857177e-2,
+        1.20249932437303932411e-2,
+        -1.36753104188136881229e-3,
+        6.57491277860092595148e-5,
     };
-    static const vector<double> pade_plus_0p375_0p5_denom = {
+    static const vector<double> pade_plus_expm1_2_denom = {
         1.00000000000000000000e0,
-        2.70927539469944016591e-1,
-        -7.49018205981475505380e0,
-        -1.32465067141516448800e0,
-        1.60714345242576402393e1,
-        1.21071053538685280247e0,
-        -8.57794054432440208538e0,
+        2.48696501912062288766e0,
+        2.06239370128871696850e0,
+        5.67577904795053902651e-1,
+        -2.89022828087034733385e-2,
+        -2.17207943286085236479e-2,
+        3.14098307020814954876e-4,
+        3.51448381406676891012e-4,
+        5.71995514606568751522e-5,
+    };
+    static const vector<double> pade_plus_expm2_3_numer = {
+        3.84521387984759064238e-1,
+        4.15763727809667641126e-1,
+        -1.73610240124046440578e-2,
+        -3.89915764128788049837e-2,
+        1.07252911248451890192e-2,
+        7.62613727089795367882e-4,
+        -3.11382403581073580481e-4,
+        3.93093062843177374871e-5,
+    };
+    static const vector<double> pade_plus_expm2_3_denom = {
+        1.00000000000000000000e0,
+        6.76193897442484823754e-1,
+        3.70953499602257825764e-2,
+        -2.84211795745477605398e-2,
+        2.66146101014551209760e-3,
+        1.85436727973937413751e-3,
+        2.00318687649825430725e-4,
     };
     static const vector<double> pade_plus_expm3_4_numer = {
         4.46943301497773314460e-1,
@@ -699,77 +622,43 @@ double holtsmark_quantile(double x, bool complementary = false) {
         2.16883897125962281968e-7,
         1.35121503608967367232e-8,
     };
-    static const vector<double> pade_plus_expm64_96_numer = {
-        3.41392031627647840817e-1,
-        2.18544418142248369868e-1,
-    };
-    static const vector<double> pade_plus_expm64_96_denom = {
-        1.00000000000000000000e0,
-        6.40156763765980698523e-1,
-    };
 
     if (x > 0.5) {
         return -holtsmark_quantile(1 - x, complementary);
     }
 
-    double y;
-    if (x >= 0.125) {
-        if (x <= 0.140625) {
-            y = pade(0.140625 - x, pade_plus_0p125_0p140625_numer, pade_plus_0p125_0p140625_denom);
-        }
-        else if (x <= 0.15625) {
-            y = pade(0.15625 - x, pade_plus_0p140625_0p15625_numer, pade_plus_0p140625_0p15625_denom);
-        }
-        else if (x <= 0.1875) {
-            y = pade(0.1875 - x, pade_plus_0p15625_0p1875_numer, pade_plus_0p15625_0p1875_denom);
-        }
-        else if (x <= 0.25) {
-            y = pade(0.25 - x, pade_plus_0p1875_0p25_numer, pade_plus_0p1875_0p25_denom);
-        }
-        else if (x <= 0.28125) {
-            y = pade(0.28125 - x, pade_plus_0p25_0p28125_numer, pade_plus_0p25_0p28125_denom);
-        }
-        else if (x <= 0.3125) {
-            y = pade(0.3125 - x, pade_plus_0p28125_0p3125_numer, pade_plus_0p28125_0p3125_denom);
-        }
-        else if (x <= 0.375) {
-            y = pade(0.375 - x, pade_plus_0p3125_0p375_numer, pade_plus_0p3125_0p375_denom);
-        }
-        else {
-            y = pade(0.5 - x, pade_plus_0p375_0p5_numer, pade_plus_0p375_0p5_denom);
-        }
+    double v;
+    int exponent = ilogb(x);
+
+    if (exponent >= -2) {
+        v = pade(-log2(ldexp(x, 1)), pade_plus_expm1_2_numer, pade_plus_expm1_2_denom);
+    }
+    else if (exponent >= -3) {
+        v = pade(-log2(ldexp(x, 2)), pade_plus_expm2_3_numer, pade_plus_expm2_3_denom);
+    }
+    else if (exponent >= -4) {
+        v = pade(-log2(ldexp(x, 3)), pade_plus_expm3_4_numer, pade_plus_expm3_4_denom);
+    }
+    else if (exponent >= -6) {
+        v = pade(-log2(ldexp(x, 4)), pade_plus_expm4_6_numer, pade_plus_expm4_6_denom);
+    }
+    else if (exponent >= -8) {
+        v = pade(-log2(ldexp(x, 6)), pade_plus_expm6_8_numer, pade_plus_expm6_8_denom);
+    }
+    else if (exponent >= -16) {
+        v = pade(-log2(ldexp(x, 8)), pade_plus_expm8_16_numer, pade_plus_expm8_16_denom);
+    }
+    else if (exponent >= -32) {
+        v = pade(-log2(ldexp(x, 16)), pade_plus_expm16_32_numer, pade_plus_expm16_32_denom);
+    }
+    else if (exponent >= -64) {
+        v = pade(-log2(ldexp(x, 32)), pade_plus_expm32_64_numer, pade_plus_expm32_64_denom);
     }
     else {
-        double v;
-        int exponent = ilogb(x);
-
-        if (exponent >= -4) {
-            v = pade(-log2(ldexp(x, 3)), pade_plus_expm3_4_numer, pade_plus_expm3_4_denom);
-        }
-        else if (exponent >= -6) {
-            v = pade(-log2(ldexp(x, 4)), pade_plus_expm4_6_numer, pade_plus_expm4_6_denom);
-        }
-        else if (exponent >= -8) {
-            v = pade(-log2(ldexp(x, 6)), pade_plus_expm6_8_numer, pade_plus_expm6_8_denom);
-        }
-        else if (exponent >= -16) {
-            v = pade(-log2(ldexp(x, 8)), pade_plus_expm8_16_numer, pade_plus_expm8_16_denom);
-        }
-        else if (exponent >= -32) {
-            v = pade(-log2(ldexp(x, 16)), pade_plus_expm16_32_numer, pade_plus_expm16_32_denom);
-        }
-        else if (exponent >= -64) {
-            v = pade(-log2(ldexp(x, 32)), pade_plus_expm32_64_numer, pade_plus_expm32_64_denom);
-        }
-        else if (exponent >= -96) {
-            v = pade(-log2(ldexp(x, 64)), pade_plus_expm64_96_numer, pade_plus_expm64_96_denom);
-        }
-        else {
-            v = 1 / ldexp(cbrt(pi), 1);
-        }
-
-        y = v / square(cbrt(x));
+        v = 1 / ldexp(cbrt(pi), 1);
     }
+
+    double y = v / square(cbrt(x));
 
     y = complementary ? y : -y;
 
