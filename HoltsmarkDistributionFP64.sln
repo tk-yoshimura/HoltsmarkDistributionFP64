@@ -14,6 +14,13 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "HoltsmarkDistributionFP64Er
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HoltsmarkDistributionFP64_CPP", "HoltsmarkDistributionFP64_CPP\HoltsmarkDistributionFP64_CPP.vcxproj", "{C8A87698-A173-4C33-9561-3CDC92EE952E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoltsmarkDistributionFP128", "HoltsmarkDistributionFP128\HoltsmarkDistributionFP128.csproj", "{A6BCED21-A444-4F83-A0D7-AC3203A717AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoltsmarkDistributionFP128Tests", "HoltsmarkDistributionFP128Tests\HoltsmarkDistributionFP128Tests.csproj", "{02034EFC-3370-4658-BC20-CFA7422AC9B1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD} = {A6BCED21-A444-4F83-A0D7-AC3203A717AD}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +73,30 @@ Global
 		{C8A87698-A173-4C33-9561-3CDC92EE952E}.Release|x64.Build.0 = Release|x64
 		{C8A87698-A173-4C33-9561-3CDC92EE952E}.Release|x86.ActiveCfg = Release|Win32
 		{C8A87698-A173-4C33-9561-3CDC92EE952E}.Release|x86.Build.0 = Release|Win32
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Debug|x64.Build.0 = Debug|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Debug|x86.Build.0 = Debug|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Release|x64.ActiveCfg = Release|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Release|x64.Build.0 = Release|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Release|x86.ActiveCfg = Release|Any CPU
+		{A6BCED21-A444-4F83-A0D7-AC3203A717AD}.Release|x86.Build.0 = Release|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Debug|x64.Build.0 = Debug|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Debug|x86.Build.0 = Debug|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Release|x64.ActiveCfg = Release|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Release|x64.Build.0 = Release|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Release|x86.ActiveCfg = Release|Any CPU
+		{02034EFC-3370-4658-BC20-CFA7422AC9B1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
