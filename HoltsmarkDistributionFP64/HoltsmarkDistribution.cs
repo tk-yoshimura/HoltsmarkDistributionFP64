@@ -102,7 +102,7 @@ namespace HoltsmarkDistributionFP64 {
 
         public double Mean => Mu;
 
-        public double Variance => NaN;
+        public double Variance => PositiveInfinity;
 
         public double Skewness => NaN;
 
