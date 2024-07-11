@@ -35,9 +35,6 @@ Double-Double Precision: [DoubleDoubleStatistic](https://github.com/tk-yoshimura
 ## Licence
 [CC BY 4.0](https://github.com/tk-yoshimura/HoltsmarkDistributionFP64/blob/main/LICENSE)
 
-If anyone would like to use some of the code in this repository, please contact me with an Issue and let me know.  
-[Issue](https://github.com/tk-yoshimura/HoltsmarkDistributionFP64/issues)
-
 ## Report
 [ResearchGate](https://www.researchgate.net/publication/382127111_Numerical_Evaluation_and_High_Precision_Approximation_Formula_for_Holtsmark_Distribution)  
 [TechRxiv](https://www.techrxiv.org/users/661998/articles/1150313-numerical-evaluation-and-high-precision-approximation-formula-for-holtsmark-distribution)  
