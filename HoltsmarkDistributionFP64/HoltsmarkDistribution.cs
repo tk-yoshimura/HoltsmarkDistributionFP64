@@ -1,7 +1,7 @@
 ﻿// Author and Approximation Formula Coefficient Generator: T.Yoshimura
 // Github: https://github.com/tk-yoshimura
 // Original Code: https://github.com/tk-yoshimura/HoltsmarkDistributionFP64
-// Yoshimura, T., "Numerical Evaluation and High Precision Approximation Formula for Holtsmark Distribution", June 2024.
+// Yoshimura, T., "Numerical Evaluation and High Precision Approximation Formula for Holtsmark Distribution", July 2024.
 // https://www.researchgate.net/publication/382127111_Numerical_Evaluation_and_High_Precision_Approximation_Formula_for_Holtsmark_Distribution
 
 using HoltsmarkDistributionFP64.InternalUtils;
